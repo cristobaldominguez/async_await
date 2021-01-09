@@ -7,6 +7,16 @@ const pool = new Pool({
     database: 'asyncawait'
 })
 
+async function getUser(id) {
+    const qryObject = {
+        text: 'SELECT * FROM users WHERE id = $1',
+        values: [id]
+    }
 
+    const result = await pool.query(qryObject)
+    return result
+}
 
-module.exports = {}
+module.exports = {
+    getUser
+}
