@@ -6,6 +6,7 @@ CREATE TABLE users(
     gender VARCHAR(6),
     phone VARCHAR(15),
     picture VARCHAR(255),
+    city VARCHAR(75),
     location_lat VARCHAR(15),
     location_lon VARCHAR(15)
 );
