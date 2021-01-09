@@ -7,20 +7,5 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-    <script>
-        $.ajax({
-            url: 'https://randomuser.me/api/?results=200',
-            type: 'GET',
-            dataType: 'json'
-        })
-        .done(function(data) {
-            const users = data.results.map((user) => `<p>${user.name.first}, ${user.name.last}, ${user.email}, ${user.gender}, ${user.phone}, ${user.picture.large}</p>`)
-            $('body').append(users.join(''))
-        })
-        .fail(function(error) {
-            console.error(error);
-        });
-
-    </script>
 </body>
 </html>
